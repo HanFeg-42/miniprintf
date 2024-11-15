@@ -1,6 +1,6 @@
 # miniprintf
 
-This simplified version of printf supports the following format specifiers:
+This is a simplified version of printf supports the following format specifiers:
 
     %c: Prints a single character.
     %s: Prints a string, following the standard C convention (null-terminated).
