@@ -6,11 +6,11 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:37:44 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/15 17:19:22 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/16 13:16:56 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ftprintf.h"
 
 int ft_last(const char *s)
 {
