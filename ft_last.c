@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 12:37:44 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/15 13:12:08 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:19:22 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int ft_last(const char *s)
     c = 0;
     while (*s)
     {
-        if (*s++ == '%')
+        if (*(s + 1) == '%')
         {
             if(*s == 'c')
                 c++;
@@ -37,7 +37,7 @@ int ft_last(const char *s)
                 c++;
             else if(*s == 'X')
                 c++;
-            *s++;
+            s+=2;
         }
     }
     return c;

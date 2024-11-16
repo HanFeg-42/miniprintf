@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:24:22 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/15 12:50:22 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/15 17:24:14 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@ int ft_printf(const char *s, ...)
     int count;
     va_list ap;
 
-    count = ft_last(s);
-    va_start(ap, count);
+
+    va_start(ap, s);
     while(*s)
     {
         if(*s++ == '%')
