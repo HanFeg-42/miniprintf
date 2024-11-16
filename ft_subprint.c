@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:14:21 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/16 16:31:15 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/16 16:37:15 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int ft_subprint(char c, va_list ap)
     // else if(c == 'X')
     //     ret += ft_upperhex(va_arg(ap, int));
     // else if(c == '%')
-    //     ret += ft_percent(c);
+    //     ret += ft_character(c);
     // else
     //     ret = -1; hna chi erreur
     return (ret);
