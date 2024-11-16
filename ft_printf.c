@@ -6,38 +6,37 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:24:22 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/16 13:19:02 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/16 16:32:54 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+
+#include "ftprintf.h"
+
 int ft_printf(const char *s, ...)
 {
+    int ret;
     va_list ap;
 
     va_start(ap, s);
+    ret = 0;
     while(*s)
     {
-        if(*s++ == '%')
+        if(*s == '%')
         {
-            if(*s == 'c')
-                return(ft_character(va_arg(ap, char)));
-            else if(*s == 's')
-                return(ft_string(va_arg(ap, char *)));
-            else if(*s == 'p')
-                return(ft_pointer(va_arg(ap, void *)));
-            else if(*s == 'd' || *s == 'i')
-                return(ft_decint(va_arg(ap, int)));
-            else if(*s == 'u')
-                return(ft_unsigned(va_arg(ap, int)));
-            else if(*s == 'x')
-                return(ft_lowerhex(va_arg(ap, int)));
-            else if(*s == 'X')
-                return(ft_upperhex(va_arg(ap, int)));
-            else if(*s == '%')
-                return(ft_percent(va_arg(ap, char)));
-            *s++;
+            ret += ft_subprint(*(s + 1), ap);
+            s += 2;
+        }
+        else
+        {
+            ret += ft_character(*s);
+            s++;
         }
     }
     va_end(ap);
-    return;
+    return (ret);
+}
+int main()
+{
+    ft_printf("hello%% cv\n");
 }

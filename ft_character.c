@@ -6,7 +6,13 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 13:15:12 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/15 13:15:13 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/16 14:58:06 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "ftprintf.h"
+
+int ft_character(char c)
+{
+    return (write(1, &c, 1));
+}
