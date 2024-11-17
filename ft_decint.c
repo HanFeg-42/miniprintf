@@ -6,11 +6,11 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:59:11 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/16 15:04:03 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/17 14:31:11 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include "ft_printf.h"
 
 int	ft_decint(int n)
 {

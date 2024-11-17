@@ -6,11 +6,11 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/27 01:29:25 by marvin            #+#    #+#             */
-/*   Updated: 2024/11/16 21:23:35 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/17 14:32:22 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include "ft_printf.h"
 
 size_t	ft_strlen(const char *str)
 {

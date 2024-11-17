@@ -6,18 +6,19 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:24:22 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/16 21:27:50 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/17 14:36:44 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-#include "ftprintf.h"
+#include "ft_printf.h"
 
 int ft_printf(const char *s, ...)
 {
     int ret;
     va_list ap;
 
+    if (!s || write(1, 0, 0) == -1)
+        return (-1);
     va_start(ap, s);
     ret = 0;
     while(*s)

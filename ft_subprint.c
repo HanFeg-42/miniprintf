@@ -6,11 +6,11 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:14:21 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/16 22:03:37 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/17 14:32:27 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ftprintf.h"
+#include "ft_printf.h"
 
 int ft_subprint(char c, va_list ap)
 {
@@ -21,16 +21,14 @@ int ft_subprint(char c, va_list ap)
         ret = ft_character(va_arg(ap, int));
     else if(c == 's')
         ret = ft_string(va_arg(ap, char *));
-    // else if(c == 'p')
-    //     ret += ft_pointer(va_arg(ap, void *));
+    else if(c == 'p')
+        ret += ft_pointer(va_arg(ap, void *));
     else if(c == 'd' || c == 'i')
         ret = ft_decint(va_arg(ap, int));
     else if(c == 'u')
         ret = ft_unsigned(va_arg(ap, int));
-    // else if(c == 'x')
-    //     ret += ft_lowerhex(va_arg(ap, int));
-    // else if(c == 'X')
-    //     ret += ft_upperhex(va_arg(ap, int));
+    else if(c == 'x'|| c == 'X')
+        ret += ft_hexadecimal(va_arg(ap, int), c);
     else if(c == '%')
         ret = ft_character(c);
     else // bool = 1; ft...(...,int *bool)
