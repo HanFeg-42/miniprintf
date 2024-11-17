@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:14:21 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/16 16:37:15 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/16 22:03:37 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,23 +17,26 @@ int ft_subprint(char c, va_list ap)
     int ret;
 
     ret = 0;
-    // if(c == 'c')
-    //     ret += ft_character(va_arg(ap, char));
-    // else if(c == 's')
-    //     ret += ft_string(va_arg(ap, char *));
+    if(c == 'c')
+        ret = ft_character(va_arg(ap, int));
+    else if(c == 's')
+        ret = ft_string(va_arg(ap, char *));
     // else if(c == 'p')
     //     ret += ft_pointer(va_arg(ap, void *));
-    // else if(c == 'd' || c == 'i')
-    //     ret += ft_decint(va_arg(ap, int));
-    // else if(c == 'u')
-    //     ret += ft_unsigned(va_arg(ap, int));
+    else if(c == 'd' || c == 'i')
+        ret = ft_decint(va_arg(ap, int));
+    else if(c == 'u')
+        ret = ft_unsigned(va_arg(ap, int));
     // else if(c == 'x')
     //     ret += ft_lowerhex(va_arg(ap, int));
     // else if(c == 'X')
     //     ret += ft_upperhex(va_arg(ap, int));
-    // else if(c == '%')
-    //     ret += ft_character(c);
-    // else
-    //     ret = -1; hna chi erreur
+    else if(c == '%')
+        ret = ft_character(c);
+    else // bool = 1; ft...(...,int *bool)
+    {
+        ret = ft_character('%');
+        ret += ft_character(c);
+    }
     return (ret);
 }

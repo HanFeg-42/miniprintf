@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:24:22 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/16 16:32:54 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/16 21:27:50 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ int ft_printf(const char *s, ...)
 }
 int main()
 {
-    ft_printf("hello%% cv\n");
+    int x = ft_printf("hello %% cv, my na%ime is %s,%cI am %d yo \n", "Hanane", '\n', 23);
+    ft_printf("%d", x);
 }
