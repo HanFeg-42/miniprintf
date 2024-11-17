@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 15:29:29 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/17 14:32:18 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/17 16:13:39 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 int ft_string(char *s)
 {
     if (!s)
-        return
+        return -1;
     return (write(1, s, ft_strlen(s)));
 }
 
