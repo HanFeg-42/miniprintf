@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/15 10:24:22 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/18 18:29:09 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:33:37 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,11 +23,11 @@ int ft_printf(const char *s, ...)
     ret = 0;
     while(*s)
     {
-        if(*s == '%')
+        if(*s == '%' && *(s + 1))
         {
             ret += ft_subprint(*(++s), ap);
         }
-        else
+        else if(*s != '%')
         {
             ret += ft_character(*s);
         }
@@ -36,15 +36,15 @@ int ft_printf(const char *s, ...)
     va_end(ap);
     return (ret);
 }
-int main()
-{
-    // int x = ft_printf("hello %% cv, my name is %s,%cI am %d yo \n", "Hanane", '\n', 23);
-    // ft_printf("%d", x);
+// int main()
+// {
+//     // int x = ft_printf("hello %% cv, my name is %s,%cI am %d yo \n", "Hanane", '\n', 23);
+//     // ft_printf("%d", x);
 
-    int a = 1365;
+//     int a = 1365;
     
-    int x = ft_printf("%c\t%s\t%p\t%d\t%i\t%u\t%x\t%X\t%%\t%walo\n%",a - 1300, "salam", &a, a, -a, -a, a, a);
-    int y = printf("%c\t%s\t%p\t%d\t%i\t%u\t%x\t%X\t%%\t%walo\n%",a - 1300, "salam", &a, a, -a, -a, a, a);
+//     int x = ft_printf("%c\t%s\t%p\t%d\t%i\t%u\t%x\t%X\t%%\t%walo\n%",a - 1300, "salam", &a, a, -a, -a, a, a);
+//     int y = printf("%c\t%s\t%p\t%d\t%i\t%u\t%x\t%X\t%%\t%walo\n%",a - 1300, "salam", &a, a, -a, -a, a, a);
 
-    printf("%d\n%d\n", x, y);
-}
+//     printf("%d\n%d\n", x, y);
+// }
