@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:14:21 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/18 22:05:38 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/18 22:31:42 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,13 +22,13 @@ int	ft_subprint(char c, va_list ap)
 	else if (c == 's')
 		ret = ft_string(va_arg(ap, char *));
 	else if (c == 'p')
-		ret += ft_pointer(va_arg(ap, unsigned long));
+		ret = ft_pointer(va_arg(ap, unsigned long));
 	else if (c == 'd' || c == 'i')
 		ret = ft_decint(va_arg(ap, int));
 	else if (c == 'u')
 		ret = ft_unsigned(va_arg(ap, unsigned int));
 	else if (c == 'x' || c == 'X')
-		ret += ft_hexadecimal(va_arg(ap, unsigned long), c);
+		ret = ft_hexadecimal(va_arg(ap, unsigned long), c);
 	else if (c == '%' || c)
 		ret = ft_character(c);
 	// else if(!c)// bool = 1; ft...(...,int *bool)
