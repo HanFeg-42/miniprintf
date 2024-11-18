@@ -6,13 +6,13 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:14:21 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/17 16:10:48 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/18 16:14:19 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_subprint(char c, va_list ap)
+int ft_subprint(char c, va_list ap, int *check)
 {
     int ret;
 
@@ -33,8 +33,7 @@ int ft_subprint(char c, va_list ap)
         ret = ft_character(c);
     else // bool = 1; ft...(...,int *bool)
     {
-        ret = ft_character('%');
-        ret += ft_character(c);
+        check = 1;
     }
     return (ret);
 }
