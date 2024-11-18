@@ -6,13 +6,13 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:14:21 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/18 16:14:19 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/18 18:05:33 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int ft_subprint(char c, va_list ap, int *check)
+int ft_subprint(char c, va_list ap)
 {
     int ret;
 
@@ -29,11 +29,9 @@ int ft_subprint(char c, va_list ap, int *check)
         ret = ft_unsigned(va_arg(ap, unsigned int));
     else if(c == 'x'|| c == 'X')
         ret += ft_hexadecimal(va_arg(ap, unsigned long), c);
-    else if(c == '%')
+    else if(c == '%' || c)
         ret = ft_character(c);
-    else // bool = 1; ft...(...,int *bool)
-    {
-        check = 1;
-    }
+    // else if(!c)// bool = 1; ft...(...,int *bool)
+    //     ret = 0;
     return (ret);
 }
