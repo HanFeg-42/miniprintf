@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 16:21:18 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/17 14:32:33 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/18 22:05:42 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 
 int	ft_unsigned(unsigned int n)
 {
-    int ret;
+	int ret;
 
-    ret = 0;
+	ret = 0;
 	if (n > 9)
 		ret += ft_unsigned(n / 10);
 	ret += ft_character(n % 10 + '0');
-    return (ret);
+	return (ret);
 }

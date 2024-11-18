@@ -6,7 +6,7 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/16 14:59:11 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/17 14:31:11 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/18 22:05:00 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 int	ft_decint(int n)
 {
-    int ret;
+	int		ret;
 	long	nbr;
 
-    ret = 0;
+	ret = 0;
 	nbr = n;
 	if (nbr < 0)
 	{
@@ -27,5 +27,5 @@ int	ft_decint(int n)
 	if (nbr > 9)
 		ret += ft_decint(nbr / 10);
 	ret += ft_character(nbr % 10 + '0');
-    return (ret);
+	return (ret);
 }
