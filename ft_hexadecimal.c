@@ -6,13 +6,13 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 09:46:36 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/18 22:05:09 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/19 14:22:28 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_hexadecimal(unsigned long n, char c)
+int	ft_hexadecimal(unsigned int n, char c)
 {
 	int	re;
 

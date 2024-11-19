@@ -16,7 +16,7 @@ int		ft_character(char c);
 int		ft_decint(int n);
 int		ft_string(char *s);
 int		ft_unsigned(unsigned int n);
-int		ft_hexadecimal(unsigned long n, char c);
+int		ft_hexadecimal(unsigned int n, char c);
 int		ft_pointer(unsigned long l);
 
 #endif
