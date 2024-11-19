@@ -6,21 +6,20 @@
 /*   By: hfegrach <hfegrach@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/17 14:13:14 by hfegrach          #+#    #+#             */
-/*   Updated: 2024/11/19 14:28:06 by hfegrach         ###   ########.fr       */
+/*   Updated: 2024/11/19 15:06:56 by hfegrach         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-static int	ft_hexa(unsigned long n, char c)
+static int	ft_hexa(unsigned long n)
 {
 	int	re;
 
 	re = 0;
 	if (n > 15)
-		re += ft_hexa(n / 16, c);
-	if (c == 'x')
-		re += (write(1, &"0123456789abcdef"[n % 16], 1));
+		re += ft_hexa(n / 16);
+	re += (write(1, &"0123456789abcdef"[n % 16], 1));
 	return (re);
 }
 
@@ -30,6 +29,6 @@ int	ft_pointer(unsigned long l)
 
 	ret = 0;
 	ret += ft_string("0x");
-	ret += ft_hexa(l, 'x');
+	ret += ft_hexa(l);
 	return (ret);
 }
